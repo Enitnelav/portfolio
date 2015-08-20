@@ -1,0 +1,95 @@
+// breakpoints
+$XS:    320px;   
+$S:     420px; 
+$SM:    600px;  
+$M:     768px;     
+$L:     992px;
+$ML:    1024px; 
+$XL:    1200px;
+$XXL:   1400px;
+$XXXL:  1600px;   
+$XXXXL:  1800px;     
+
+
+
+
+// media queries
+
+@mixin MQ_MIN($canvas) {
+  @if $canvas == XS {
+   @media only screen and (min-width: $XS) { @content; } 
+  }
+  @else if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == SM {
+   @media only screen and (min-width: $SM) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+  @else if $canvas == XL {
+   @media only screen and (min-width: $XL) { @content; } 
+  }
+  @else if $canvas == XXL {
+   @media only screen and (min-width: $XXL) { @content; } 
+  }
+  @else if $canvas == XXXL {
+   @media only screen and (min-width: $XXXL) { @content; } 
+  }
+  @else if $canvas == XXXXL {
+   @media only screen and (min-width: $XXXXL) { @content; } 
+  }
+}
+
+@mixin MQ_MAX($canvas) {
+  @if $canvas == XS {
+   @media only screen and (max-width: $XS) { @content; } 
+  }
+  @else if $canvas == S {
+   @media only screen and (max-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (max-width: $M) { @content; } 
+  }
+  @else if $canvas == SM {
+   @media only screen and (max-width: $SM) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (max-width: $L) { @content; } 
+  }
+  @else if $canvas == ML {
+   @media only screen and (max-width: $ML) { @content; } 
+  }
+  @else if $canvas == XL {
+   @media only screen and (max-width: $XL) { @content; } 
+  }
+  @else if $canvas == XXL {
+   @media only screen and (max-width: $XXL) { @content; } 
+  }
+  @else if $canvas == XXXL {
+   @media only screen and (max-width: $XXXL) { @content; } 
+  }
+  @else if $canvas == XXXXL {
+   @media only screen and (max-width: $XXXXL) { @content; } 
+  }
+}
+
+@mixin MQ_MIN_MAX($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) and (max-width: $SM) { @content; } 
+  }
+  @if $canvas == SM {
+   @media only screen and (min-width: $SM) and (max-width: $M) { @content; } 
+  }
+  @if $canvas == M {
+   @media only screen and (min-width: $M) and (max-width: $L) { @content; } 
+  }
+  @if $canvas == L {
+   @media only screen and (min-width: $L) and (max-width: $XL) { @content; } 
+  }
+}
+
