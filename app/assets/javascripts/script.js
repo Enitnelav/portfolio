@@ -28,4 +28,9 @@ $(document).ready(function() {
 		.setClassToggle(".right span", "mov")
 		//.addIndicators({name: "1 - add a class"}) // add indicators (requires plugin)
 		.addTo(controller);
+
+	// CLOUD ANS WAVES
+	
+	$('#scene-nuage').parallax();
+	
 });
