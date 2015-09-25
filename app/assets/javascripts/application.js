@@ -10,8 +10,16 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require_tree ./scrollmagic
+//= require jquery.parallax.min.js
+//= require anim-crea/masonry.pkgd.min.js
+//= require anim-crea/imagesloaded.js
+//= require anim-crea/classie.js
+//= require anim-crea/AnimOnScroll.js
+//= require script.js
+

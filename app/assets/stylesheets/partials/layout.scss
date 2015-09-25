@@ -1,17 +1,18 @@
 // breakpoints
-$XS:    320px;   
-$S:     420px; 
-$SM:    600px;  
-$M:     768px;     
-$L:     992px;
-$ML:    1024px; 
-$XL:    1200px;
-$XXL:   1400px;
-$XXXL:  1600px;   
-$XXXXL:  1800px;     
-
-
-
+$XS:      320px;   
+$S:       420px;
+$SSM:     500px;   
+$SM:      600px;
+$SMM:     700px;      
+$M:       768px; 
+$ML:      900px;  
+$L:       992px;
+$LM:     1024px; 
+$XL:     1200px;
+$XXL:    1400px;
+$XXXL:   1600px;   
+$XXXXL:  1800px;
+$XXXXXL: 1900px;     
 
 // media queries
 
@@ -22,11 +23,23 @@ $XXXXL:  1800px;
   @else if $canvas == S {
    @media only screen and (min-width: $S) { @content; } 
   }
+  @else if $canvas == SSM {
+   @media only screen and (min-width: $SSM) { @content; } 
+  }
   @else if $canvas == SM {
    @media only screen and (min-width: $SM) { @content; } 
   }
+  @else if $canvas == SMM {
+   @media only screen and (min-width: $SMM) { @content; } 
+  }
+  @else if $canvas == ML {
+   @media only screen and (min-width: $ML) { @content; } 
+  }
   @else if $canvas == M {
    @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == LM {
+   @media only screen and (min-width: $LM) { @content; } 
   }
   @else if $canvas == L {
    @media only screen and (min-width: $L) { @content; } 
@@ -43,6 +56,9 @@ $XXXXL:  1800px;
   @else if $canvas == XXXXL {
    @media only screen and (min-width: $XXXXL) { @content; } 
   }
+  @else if $canvas == XXXXXL {
+   @media only screen and (min-width: $XXXXXL) { @content; } 
+  }
 }
 
 @mixin MQ_MAX($canvas) {
@@ -52,17 +68,26 @@ $XXXXL:  1800px;
   @else if $canvas == S {
    @media only screen and (max-width: $S) { @content; } 
   }
-  @else if $canvas == M {
-   @media only screen and (max-width: $M) { @content; } 
+  @else if $canvas == SSM {
+   @media only screen and (max-width: $SSM) { @content; } 
   }
   @else if $canvas == SM {
    @media only screen and (max-width: $SM) { @content; } 
   }
-  @else if $canvas == L {
-   @media only screen and (max-width: $L) { @content; } 
+  @else if $canvas == SMM {
+   @media only screen and (max-width: $SMM) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (max-width: $M) { @content; } 
   }
   @else if $canvas == ML {
    @media only screen and (max-width: $ML) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (max-width: $L) { @content; } 
+  }
+  @else if $canvas == LM {
+   @media only screen and (max-width: $LM) { @content; } 
   }
   @else if $canvas == XL {
    @media only screen and (max-width: $XL) { @content; } 
@@ -75,6 +100,9 @@ $XXXXL:  1800px;
   }
   @else if $canvas == XXXXL {
    @media only screen and (max-width: $XXXXL) { @content; } 
+  }
+  @else if $canvas == XXXXXL {
+   @media only screen and (max-width: $XXXXXL) { @content; } 
   }
 }
 

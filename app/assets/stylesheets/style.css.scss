@@ -1,18 +1,23 @@
 @import 'partials/layout';
 
-// $XS:    320px;   
-// $S:     420px; 
-// $SM:    600px;  
-// $M:     768px;     
-// $L:     992px;
-// $ML:    1024px; 
-// $XL:    1200px;
-// $XXL:   1400px;
-// $XXXL:  1600px;   
-// $XXXXL:  1800px;  
+// $XS:      320px;   
+// $S:       420px;
+// $SSM:     500px;   
+// $SM:      600px;
+// $SMM:     700px;      
+// $M:       768px; 
+// $ML:      900px;  
+// $L:       992px;
+// $LM:     1024px; 
+// $XL:     1200px;
+// $XXL:    1400px;
+// $XXXL:   1600px;   
+// $XXXXL:  1800px;
+// $XXXXXL: 1900px; 
 
 body {
 	overflow-x: hidden;
+	min-width: 320px;
 }
 
 section#first {
@@ -22,43 +27,61 @@ section#first {
 	position: relative;
 	z-index: 0;
 
-	height: 800px;
+	@include MQ_MIN(XXXXXL) {
+		height: 1120px;
+	}
 
-	// @include MQ_MAX(XXXL) {
-	// 	height: 900px;
-	// }
+	@include MQ_MAX(XXXXXL) {
+		height: 1120px;
+	}
 
-	// @include MQ_MAX(XXL) {
-	// 	height: 850px;
-	// }
+	@include MQ_MAX(XXXXL) {
+		height: 1070px;
+	}
 
-	// @include MQ_MAX(XL) {
-	// 	height: 750px;
-	// }
+	@include MQ_MAX(XXXL) {
+		height: 930px;
+	}
 
-	// @include MQ_MAX(ML) {
-	// 	height: 680px;
-	// }
+	@include MQ_MAX(XXL) {
+		height: 810px;
+	}
 
-	// @include MQ_MAX(L) {
-	// 	height: 620px;
-	// }
+	@include MQ_MAX(XL) {
+		height: 700px;
+	}
 
-	// @include MQ_MAX(M) {
-	// 	height: 600px;
-	// }
+	@include MQ_MAX(LM) {
+		height: 600px;
+	}
 
-	// @include MQ_MAX(SM) {
-	// 	height: 460px;
-	// }
+	@include MQ_MAX(L) {
+		height: 580px;
+	}
 
-	// @include MQ_MAX(S) {
-	// 	height: 400px;
-	// }
+	@include MQ_MAX(ML) {
+		height: 540px;
+	}
 
-	// @include MQ_MAX(XS) {
-	// 	height: 300px;
-	// }
+	@include MQ_MAX(M) {
+		height: 500px;
+	}
+
+	@include MQ_MAX(SMM) {
+		height: 400px;
+	}
+
+	@include MQ_MAX(SM) {
+		height: 340px;
+	}
+
+	@include MQ_MAX(SSM) {
+		height: 280px;
+	}
+
+	@include MQ_MAX(S) {
+		height: 240px;
+	}
 
 	#scene-nuage {
 		padding: 0;
@@ -111,45 +134,52 @@ section#first {
 		z-index: 1;
 	}
 
-	.vol-au-vent {
+	#vol-au-vent {
+		height: 50%;
 		position: absolute;
+		bottom: 0;
+		width: 100%;
 
-		&.big {
-			animation-name: spin;
-		    animation-duration: 4000ms;
-		    animation-iteration-count: infinite;
-		    animation-timing-function: linear;
-			bottom: 30%;
-			width: 10%;
-			right: 10%;
-		}
+		.vol-au-vent {
+			position: absolute;
 
-		@keyframes spin {
-		    from {
-		        transform:rotate(0deg);
-		    }
-		    to {
-		        transform:rotate(360deg);
-		    }
-		}
+			&.big {
+				animation-name: spin;
+			    animation-duration: 4000ms;
+			    animation-iteration-count: infinite;
+			    animation-timing-function: linear;
+				width: 10%;
+				right: 10%;
+				top: 4%;
+			}
 
-		&.small {
-			animation-name: spin;
-		    animation-duration: 4000ms;
-		    animation-iteration-count: infinite;
-		    animation-timing-function: linear;
-			bottom: 30%;
-			width: 6%;
-			right: 3.8%;
-		}
+			@keyframes spin {
+			    from {
+			        transform:rotate(0deg);
+			    }
+			    to {
+			        transform:rotate(360deg);
+			    }
+			}
 
-		@keyframes spin {
-		    from {
-		        transform:rotate(0deg);
-		    }
-		    to {
-		        transform:rotate(360deg);
-		    }
+			&.small {
+				animation-name: spin;
+			    animation-duration: 4000ms;
+			    animation-iteration-count: infinite;
+			    animation-timing-function: linear;
+				width: 7%;
+				right: 3%;
+				top: 16%;
+			}
+
+			@keyframes spin {
+			    from {
+			        transform:rotate(0deg);
+			    }
+			    to {
+			        transform:rotate(360deg);
+			    }
+			}
 		}
 	}
 }
@@ -216,10 +246,55 @@ section#second {
 				z-index: 0;
 
 				div {
-					top: -5px;
 				    position: absolute;
-    				left: -10%;
-    				width: 120%;
+
+    				@include MQ_MIN(XXXXXL) {
+						top: -33px;
+    					left: -10px;
+    					width: 300%;
+					}
+
+					@include MQ_MAX(XXXXXL) {
+						top: -33px;
+    					left: -10px;
+    					width: 300%;
+					}
+
+					@include MQ_MAX(XXXXL) {
+						top: -30px;
+    					left: -90px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(XXXL) {
+						top: -10px;
+    					left: -90px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(XL) {
+						top: 0px;
+    					left: -70px;
+    					width: 110%;
+					}
+
+					@include MQ_MAX(L) {
+						top: 10px;
+    					left: -50px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(M) {
+						top: 20px;
+    					left: -50px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(SM) {
+						top: 30px;
+  					  	left: -30px;
+  					  	width: 110%;
+					}
 				}
     		}
 
@@ -228,9 +303,48 @@ section#second {
 
 				div {
 					position: absolute;
-				    right: 22%;
-				    width: 18%;
-				    top: -50px;
+					right: 22%;
+			    	width: 18%;
+
+				    @include MQ_MIN(XXXXXL) {
+				    	top: -90px;
+					}
+
+					@include MQ_MAX(XXXXXL) {
+				    	top: -90px;
+					}
+
+					@include MQ_MAX(XXXXL) {
+						top: -55px;
+					}
+
+					@include MQ_MAX(XXXL) {
+						top: -55px;
+					}
+
+					@include MQ_MAX(XXL) {
+						top: -45px;
+					}
+
+					@include MQ_MAX(XL) {
+						top: -35px;
+					}
+
+					@include MQ_MAX(L) {
+						top: -20px;
+					}
+
+					@include MQ_MAX(M) {
+						top: -10px;
+					}
+
+					@include MQ_MAX(SM) {
+						top: 7px;
+  					}
+
+  					@include MQ_MAX(SSM) {
+						top: 12px;
+  					}
 	   	 		}
     		}
 
@@ -238,10 +352,56 @@ section#second {
 				z-index: 2;
 				
 				div {
-					top: 4px;
 				    position: absolute;
-    				right: -10%;
-    				width: 120%;
+
+    				@include MQ_MIN(XXXXXL) {
+						top: -2px;
+    					left: 0px;
+    					width: 300%;
+					}
+
+					@include MQ_MAX(XXXXXL) {
+					    top: -2px;
+    					left: 0px;
+    					width: 300%;
+					}
+
+					@include MQ_MAX(XXXXL) {
+						top: -2px;
+    					left: -90px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(XXXL) {
+						top: 10px;
+    					left: -90px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(XL) {
+					    top: 20px;
+    					left: -30px;
+    					width: 110%;
+					}
+
+					@include MQ_MAX(L) {
+						top: 20px;
+    					left: -40px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(M) {
+						top: 25px;
+    					left: -20px;
+    					left: -50px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(SM) {
+						top: 35px;
+    					left: -10px;
+  					  	width: 110%;
+					}
 				}
     		}		
 
@@ -249,10 +409,56 @@ section#second {
 				z-index: 3;
 
 				div {
-					top: 30px;
 				    position: absolute;
-    				right: -10%;
-    				width: 120%;
+
+    				@include MQ_MIN(XXXXXL) {
+						top: 30px;
+    					left: 0px;
+    					width: 300%;
+					}
+
+					@include MQ_MAX(XXXXXL) {
+					    top: 30px;
+    					left: 0px;
+    					width: 300%;
+					}
+
+					@include MQ_MAX(XXXXL) {
+						top: 30px;
+    					left: -90px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(XXXL) {
+						top: 30px;
+    					left: -90px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(XL) {
+					    top: 30px;
+    					left: -30px;
+    					width: 110%;
+					}
+
+					@include MQ_MAX(L) {
+						top: 30px;
+    					left: -40px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(M) {
+						top: 30px;
+    					left: -20px;
+    					left: -50px;
+   						width: 110%;
+					}
+
+					@include MQ_MAX(SM) {
+						top: 40px;
+    					left: -10px;
+  					  	width: 110%;
+					}
 				}	
     		}
 
@@ -265,20 +471,136 @@ section#third {
 	background: image-url("third/bg.png") center bottom no-repeat, -o-linear-gradient(top, #1bbbd3, #0c4067); /* For Opera 11.1 to 12.0 */
 	background: image-url("third/bg.png") center bottom no-repeat, -moz-linear-gradient(top, #1bbbd3, #0c4067); /* For Firefox 3.6 to 15 */
 	background: image-url("third/bg.png") center bottom no-repeat, linear-gradient(top, #1bbbd3, #0c4067); /* Standard syntax */
-	margin-top: 50px;
-	padding-top: 150px;
 	padding-bottom: 230px;
 	position: relative;
 
+	@include MQ_MIN(XXXXXL) {
+		margin-top: 50px;
+		padding-top: 100px;		
+	}
+
+	@include MQ_MAX(XXXXXL) {
+		margin-top: 50px;
+		padding-top: 100px;
+	}
+
+	@include MQ_MAX(XXXXL) {
+		margin-top: 50px;
+		padding-top: 100px;
+	}
+
+	@include MQ_MAX(XXXL) {
+		margin-top: 40px;
+		padding-top: 100px;
+	}
+
+	@include MQ_MAX(XL) {
+		margin-top: 30px;
+    	padding-top: 100px;
+	}
+
+	@include MQ_MAX(L) {		
+		margin-top: 20px;
+		padding-top: 100px;	
+	}
+
+	@include MQ_MAX(M) {			
+		margin-top: 10px;	
+		padding-top: 50px;	
+	}
+
+	@include MQ_MAX(SM) {
+		margin-top: 0;	
+		padding-top: 40px;				
+	}
+
 	#bloc-crea {
 		width: 90%;
-		height: 500px;
+		//height: 500px;
 		background-color: #fff;
 		margin: 0 auto;
 		border-radius: 3px;
+		padding: 20px;
+
+
+		/* Effect 4: fall perspective */
+
+		.grid {
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				perspective: 1300px;
+			}
+
+			li {
+				display: block;
+				float: left;
+				padding: 7px;
+				width: 33%;
+				opacity: 0;
+				transform-style: preserve-3d;
+
+				&.animate {
+					transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+					animation: fallPerspective .8s ease-in-out forwards;
+				}
+
+				a, img {
+					outline: none;
+					border: none;
+					display: block;
+					max-width: 100%;
+				}
+			}
+
+			@keyframes fallPerspective {
+				100% {
+					transform: translateZ(0px) translateY(0px) rotateX(0deg);
+					opacity: 1;
+				}
+			}
+
+			.double {
+				a {
+					margin-bottom: 14px;
+
+					img {
+						height: 270px;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+				
+			}
+
+			&.first {
+				li {
+					opacity: 1;
+				}
+			}
+
+			&.second, &.third {
+				display: none;
+			}
+		}			
+	}
+
+
+	.mov {
+		right: 0 !important;
+		opacity: 1 !important;
 	}
 
 	#submarine {
+		opacity: 0;
+		position: relative;
+		right: -100%;
+		transition: all 2s ease-out;
+
 		img {
 			width: 90%;
 			margin: 100px auto;

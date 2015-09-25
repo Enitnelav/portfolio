@@ -16,11 +16,13 @@
 	<div class="phare">
 		<%= image_tag("first/phare.png", alt: "Phare", class: "img-responsive") %>
 	</div>
-	<div class="vol-au-vent big">
-		<%= image_tag("first/vol-au-vent.svg", alt: "Vol au vent", class: "img-responsive") %>
-	</div>
-	<div class="vol-au-vent small">
-		<%= image_tag("first/vol-au-vent.svg", alt: "Vol au vent", class: "img-responsive") %>
+	<div id="vol-au-vent">
+		<div class="vol-au-vent big">
+			<%= image_tag("first/vol-au-vent.svg", alt: "Vol au vent", class: "img-responsive") %>
+		</div>
+		<div class="vol-au-vent small">
+			<%= image_tag("first/vol-au-vent.svg", alt: "Vol au vent", class: "img-responsive") %>
+		</div>
 	</div>
 </section>
 
@@ -51,9 +53,55 @@
 
 <section id="third">
 	<div id="bloc-crea">
-		<p>aipbvap</p>
+		<div class="grid first">
+			<ul>
+				<li>
+					<a href="http://drbl.in/fWMM" class="pull-left"><%= image_tag("third/crea/1.jpg", alt: "", class: "img-responsive") %></a>
+				</li>
+				<li class="pull-left double">
+					<a href="http://drbl.in/fWPV"><%= image_tag("third/crea/3.jpg", alt: "", class: "img-responsive") %></a>
+					<a href="http://drbl.in/fWPV"><%= image_tag("third/crea/13.png", alt: "", class: "img-responsive") %></a>
+				</li>
+				<li>
+					<a href="http://drbl.in/fWMT" class="pull-left "><%= image_tag("third/crea/4.jpg", alt: "", class: "img-responsive") %></a>
+				</li>
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+		<div class="grid second">
+			<ul>
+				<li class="pull-left double">
+					<a href="http://drbl.in/fWPV"><%= image_tag("third/crea/3.jpg", alt: "", class: "img-responsive") %></a>
+					<a href="http://drbl.in/fWPV"><%= image_tag("third/crea/13.png", alt: "", class: "img-responsive") %></a>
+				</li>
+				<li>
+					<a href="http://drbl.in/fWMM" class="pull-left"><%= image_tag("third/crea/1.jpg", alt: "", class: "img-responsive") %></a>
+				</li>
+				<li>
+					<a href="http://drbl.in/fWMT" class="pull-left "><%= image_tag("third/crea/4.jpg", alt: "", class: "img-responsive") %></a>
+				</li>
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+		<div class="grid third">
+			<ul>
+				<li>
+					<a href="http://drbl.in/fWMM" class="pull-left"><%= image_tag("third/crea/1.jpg", alt: "", class: "img-responsive") %></a>
+				</li>
+				<li>
+					<a href="http://drbl.in/fWMT" class="pull-left "><%= image_tag("third/crea/4.jpg", alt: "", class: "img-responsive") %></a>
+				</li>
+				<li class="pull-left double">
+					<a href="http://drbl.in/fWPV"><%= image_tag("third/crea/3.jpg", alt: "", class: "img-responsive") %></a>
+					<a href="http://drbl.in/fWPV"><%= image_tag("third/crea/13.png", alt: "", class: "img-responsive") %></a>
+				</li>
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+		<a id="more" data-click="0">Voir plus</a>
 	</div>
-	<div id="submarine">
+
+	<div id="submarine" class="submarine">
 		<%= image_tag("third/submarine.png", alt: "Submarine", class: "img-responsive") %>
 	</div>
 </section>
@@ -61,4 +109,3 @@
 <section id="fourth">
 	<form></form>
 </section>
-
