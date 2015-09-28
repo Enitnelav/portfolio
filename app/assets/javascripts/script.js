@@ -8,17 +8,26 @@ $(document).ready(function() {
 		triggerElement: "#bloc-crea",
 		triggerHook: 0
 	})
-		.setClassToggle(".submarine", "mov")
+		.setClassToggle(".submarine img", "mov")
 		.addIndicators({name: "1 - add a class"}) // add indicators (requires plugin)
 		.addTo(controller);
 
-	// var scene = new ScrollMagic.Scene({
-	// 	triggerElement: "#third-section",
-	// 	triggerHook: 0
-	// })
-	// 	//.setClassToggle(".right span", "mov")
-	// 	.addIndicators({name: "3 - add a class"}) // add indicators (requires plugin)
-	// 	.addTo(controller);
+
+    
+    new ScrollMagic.Scene({ triggerElement: "#bloc-crea", triggerHook: 0 })
+    .on('ready', function () {
+        $('.circlestat').circliful();
+    })
+    .addTo(controller);
+
+
+	var scene = new ScrollMagic.Scene({
+		triggerElement: "#submarine",
+		triggerHook: 0
+	})
+		//$('.circlestat').circliful();
+		.addIndicators({name: "3 - add a class"}) // add indicators (requires plugin)
+		.addTo(controller);
 
 	// CLOUDS
 	
@@ -68,5 +77,15 @@ $(document).ready(function() {
 		nb_click ++;
 		$('#more').attr('data-click', nb_click);
 	});
+
+	// CIRCLE STAT
+
+	// pos = $("#submarine").offset().top;
+
+	// $(window).scroll(function(){
+	// 	if( $(window).scrollTop() = pos ) {
+	// 		$('.circlestat').circliful();
+	// 	}
+	// });
 
 });

@@ -553,6 +553,30 @@ section#third {
 					display: block;
 					max-width: 100%;
 				}
+
+				.color-1 {
+					height: 400px;
+					background-color: #ec6851;
+					width: 100%;
+				}
+
+				.color-2 {
+					height: 193px;
+					background-color: #f5eace;
+					width: 100%;
+				}
+
+				.color-3 {
+					height: 193px;
+					background-color: #169dae;
+					width: 100%;
+				}
+
+				.color-4 {
+					height: 400px;
+					background-color: #30384f;
+					width: 100%;
+				}
 			}
 
 			@keyframes fallPerspective {
@@ -590,20 +614,46 @@ section#third {
 	}
 
 
-	.mov {
-		right: 0 !important;
-		opacity: 1 !important;
-	}
+	
 
 	#submarine {
-		opacity: 0;
+		//opacity: 0;
 		position: relative;
-		right: -100%;
-		transition: all 2s ease-out;
+
+		.circliful {
+		    position: relative; 
+		}
+
+		.circle-text, .circle-info, .circle-text-half, .circle-info-half {
+		    width: 100%;
+		    position: absolute;
+		    text-align: center;
+		    display: inline-block;
+		}
+
+		.circle-info, .circle-info-half {
+			color: #999;
+		}
+
+		.circliful .fa {
+			margin: -10px 3px 0 3px;
+			position: relative;
+			bottom: 4px;
+		}
+
+		.mov {
+			right: 0 !important;
+			//opacity: 1 !important;
+		}
+
 
 		img {
+			position: relative;
+			z-index: 0;
 			width: 90%;
 			margin: 100px auto;
+			right: -100%;
+			transition: all 2s ease-out;
 		}
 	}
 }

@@ -21,5 +21,6 @@
 //= require anim-crea/imagesloaded.js
 //= require anim-crea/classie.js
 //= require anim-crea/AnimOnScroll.js
+//= require jquery.circlifull.min.js
 //= require script.js
 
